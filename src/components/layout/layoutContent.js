@@ -1,14 +1,16 @@
 import React from "react";
-import { useStyles } from "./layoutStyles";
+import {useStyles} from "./layoutStyles";
 import Routes from "./Routes";
 
-export default function LayoutContent() {
-  const classes = useStyles();
+const LayoutContent = () => {
+    const classes = useStyles();
 
-  return (
-    <main className={classes.content}>
-      <div className={classes.toolbar} />
-      <Routes />
-    </main>
-  );
+    return (
+        <main className={classes.content}>
+            <div className={classes.toolbar}/>
+            <Routes/>
+        </main>
+    );
 }
+
+export default LayoutContent;

@@ -1,12 +1,11 @@
 import * as types from "../actions/actionTypes";
+import initialState from "./initialState";
 
-export default function layoutReducer(state = [], action) {
-  switch (action.type) {
-    case types.SHOW_DRAWER_MENU:
-      return action.drawerIsOpen;
-    case types.HIDE_DRAWER_MENU:
-      return action.drawerIsOpen;
-    default:
-      return state;
-  }
+export default function layoutReducer(state = initialState.layout, action) {
+    switch (action.type) {
+        case types.DRAWER_OPEN_HIDE:
+            return {...state, drawerIsOpen: action.drawerIsOpen};
+        default:
+            return state;
+    }
 }
